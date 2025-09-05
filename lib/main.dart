@@ -1,5 +1,6 @@
 import 'package:curency_converter/currecncy_converter_Material_package.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 
 
@@ -17,3 +18,17 @@ class MyApp extends StatelessWidget{
   ));
   }
 }
+
+//Cupertino 
+
+class MyCupertinoApp extends StatelessWidget {
+  const MyCupertinoApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const CupertinoApp(
+      home: CurrencyConverterMaterialPageState(),
+    );
+  }
+}
+

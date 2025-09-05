@@ -6,10 +6,12 @@ class CurrencyConverterMaterialPageState extends StatefulWidget {
   const CurrencyConverterMaterialPageState({super.key});
 
   @override
-  State<CurrencyConverterMaterialPageState> createState() => _CurrencyConverterMaterialPageState();
+  State<CurrencyConverterMaterialPageState> createState() =>
+      _CurrencyConverterMaterialPageState();
 }
 
-class _CurrencyConverterMaterialPageState extends State<CurrencyConverterMaterialPageState> {
+class _CurrencyConverterMaterialPageState
+    extends State<CurrencyConverterMaterialPageState> {
   double result = 0; // Variable to store converted value
   final TextEditingController textEditingController = TextEditingController();
 
@@ -27,7 +29,8 @@ class _CurrencyConverterMaterialPageState extends State<CurrencyConverterMateria
       if (amount > 0) {
         setState(() {
           // 3. Store the value in the variable
-          result = amount * 81; // Multiplication by 81 (assumed conversion rate)
+          result =
+              amount * 81; // Multiplication by 81 (assumed conversion rate)
         });
       } else {
         setState(() {
@@ -83,7 +86,8 @@ class _CurrencyConverterMaterialPageState extends State<CurrencyConverterMateria
           children: [
             // 4. Display the variable
             Text(
-              result.toString(),
+              "Rupess:${result.toString()}",
+              maxLines: 1,
               style: TextStyle(
                 fontSize: 60,
                 color: Color.fromRGBO(28, 159, 156, 0.384),
